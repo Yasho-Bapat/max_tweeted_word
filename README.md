@@ -27,7 +27,8 @@ LOGIC
   - store all tweets in a list
   - initialize a words_list and a words_count_list to store the words tweeted by the user and corresponding count
   - in a for loop, for every tweet, pull **tweet.text** to extract the text content mentioned in each element of the tweets list from the step above
-  - once tweet.text is extracted, comb through each word with for loop.
+  - once tweet.text is extracted, comb through each word with for loop
+    **For word selected in for loop, convert it to small-case to avoid multiple counting** for example, YES, Yes and yes are all considered to be different words if case insensitisation is not done.
     Check if word selected in for loop iteration exists in words_list 
         If YES, then **find index of word in words_list and increment element at index in words_count**
         If NO, check if chosen word in the loop is NOT in the words_to_filter.txt file. If word is not in words_to_filter.txt, append word in words_list and then do index matching as mentioned in the YES step
