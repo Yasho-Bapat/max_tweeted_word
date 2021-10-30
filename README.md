@@ -22,15 +22,15 @@ LOGIC
 
 2) Finding max tweeted word:
   - This is for chosen user among 5 users in users_list
-  - Pull all tweets of the user
+  - Pull all tweets of the user.
     Twitter API limits maximum tweets to be pulled at 200. To bypass this and pull all (up to ~3,500) tweets, cycle through tweets by filtering by using tweet_id which is timestamped
   - store all tweets in a list
   - initialize a words_list and a words_count_list to store the words tweeted by the user and corresponding count
   - in a for loop, for every tweet, pull **tweet.text** to extract the text content mentioned in each element of the tweets list from the step above
-  - once tweet.text is extracted, comb through each word with for loop
-    **For word selected in for loop, convert it to small-case to avoid multiple counting** for example, YES, Yes and yes are all considered to be different words if case insensitisation is not done.
-    Check if word selected in for loop iteration exists in words_list 
-        If YES, then **find index of word in words_list and increment element at index in words_count**
+  - once tweet.text is extracted, comb through each word with for loop.
+    **For word selected in for loop, convert it to small-case to avoid multiple counting.** For example, YES, Yes and yes are all considered to be different words if case insensitisation is not done.
+    Check if word selected in for loop iteration exists in words_list.
+        If YES, then **find index of word in words_list and increment element at index in words_count*.*
         If NO, check if chosen word in the loop is NOT in the words_to_filter.txt file. If word is not in words_to_filter.txt, append word in words_list and then do index matching as mentioned in the YES step
   - after this, sort the words_count_list in reverse order -- element at pos [0] is the count of the max tweeted word. Find index of element at [0] in sorted list in words_count_list and **the word at this index is the most tweeted word**
 
