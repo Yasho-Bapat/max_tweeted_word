@@ -50,7 +50,7 @@ for user in users_list:
 
     print(user)
 
-    all_tweets = []     #from this line to line 40 is getting ALL tweets by user. without this max tweet count is 200
+    all_tweets = []     #from this line to line 67 is getting ALL tweets by user. without this max tweet count is 200
     statuses_count = api.get_user(user).statuses_count
     print(statuses_count)
 
