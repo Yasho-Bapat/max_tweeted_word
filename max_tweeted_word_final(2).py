@@ -7,7 +7,7 @@ import tweepy
 
 
 auth = tweepy.OAuthHandler(consumer_id, consumer_secret)
-auth.set_access_token(bearer_token, bearer_secret)
+auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
